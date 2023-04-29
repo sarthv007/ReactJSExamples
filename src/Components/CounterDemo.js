@@ -49,6 +49,9 @@ class CounterDemo extends Component {
       <div>
         <h2>{message}</h2>
         <h2>Counter: {counter}</h2>
+        //this our javascript code
+        <button onclick="IncrementCounter()">Increment</button>
+        //this is react code
         <button onClick={this.IncrementCounter}>Increment</button>
         <button onClick={this.DecrementCounter}>Decrement</button>
         <button onClick={this.IncrementCounterByFive}>

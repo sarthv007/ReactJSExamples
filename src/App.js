@@ -1,12 +1,31 @@
 import React from "react";
 import "./App.css";
+import ConditionalRendingDemo from "./Components/ConditionalRendingDemo";
 import Counter from "./Components/Counter";
 import CounterDemo from "./Components/CounterDemo";
 import DemoComponent from "./Components/DemoComponent";
+import EventBindingDemo from "./Components/EventBindingDemo";
 import Hello from "./Components/Hello";
+import SendDataFromParentToChildAsMethod from "./Components/SendDataFromParentToChildAsMethod";
+import TextBoxDemo from "./Components/TextBoxDemo";
 import Welcome from "./Components/Welcome";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      message: "Welcome to react js!",
+    };
+  }
+
+  changeMessage = () => {
+    this.setState({
+      message: "Welcome to js world!",
+    });
+    //alert("I am from changeMessage called from parent component ");
+  };
+
   render() {
     const person = {
       firstName: "Json",
@@ -43,10 +62,22 @@ class App extends React.Component {
 
         {/* <Hello /> */}
         {/* <DemoComponent /> */}
-        <CounterDemo
+        {/* <CounterDemo
           message={"Welcome to counter application"}
           courseName={"javascript"}
-        />
+        /> */}
+
+        {/* <TextBoxDemo /> */}
+        {/* <EventBindingDemo /> */}
+        {/* <SendDataFromParentToChildAsMethod
+          message={this.state.message}
+          personArr={["sarthak", "ganesh", "amita"]}
+          personObject={{ firstName: "sarthak", lastName: "vaidya" }}
+          data={null}
+          age={undefined}
+          changeMessage={this.changeMessage}
+        /> */}
+        <ConditionalRendingDemo />
       </div>
     );
   }
