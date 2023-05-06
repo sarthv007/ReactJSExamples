@@ -1,14 +1,14 @@
 import React, { Fragment } from "react";
 import "./ListRenderingComp.scss";
-function UserList({ item, key, title }) {
-  console.log(title);
+function UserList({ item }) {
   return (
-    <Fragment key={item.id}>
+    <>
       <tr>
+        <td>{item.id}</td>
         <td>{item.firstName}</td>
         <td>{item.lastName}</td>
       </tr>
-    </Fragment>
+    </>
   );
 }
 

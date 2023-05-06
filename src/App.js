@@ -1,12 +1,14 @@
 import React from "react";
-import "./App.css";
+//import "./App.css";
 import ConditionalRendingDemo from "./Components/ConditionalRendingDemo";
 import Counter from "./Components/Counter";
 import CounterDemo from "./Components/CounterDemo";
 import DemoComponent from "./Components/DemoComponent";
 import EventBindingDemo from "./Components/EventBindingDemo";
+import FormComp from "./Components/FormComp";
 import Hello from "./Components/Hello";
 import ListRenderingComp from "./Components/ListRenderingComp";
+import ListwithKey from "./Components/ListwithKey";
 import SendDataFromParentToChildAsMethod from "./Components/SendDataFromParentToChildAsMethod";
 import TextBoxDemo from "./Components/TextBoxDemo";
 import Welcome from "./Components/Welcome";
@@ -79,7 +81,7 @@ class App extends React.Component {
           changeMessage={this.changeMessage}
         /> */}
         {/* <ConditionalRendingDemo /> */}
-        <ListRenderingComp />
+        <FormComp />
       </div>
     );
   }

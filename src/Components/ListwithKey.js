@@ -3,7 +3,8 @@ import UserList from "./UserList";
 
 //import "./ListRenderingComp.scss";
 import style from "./ListRendering.module.scss";
-export default class ListRenderingComp extends Component {
+
+export default class ListwithKey extends Component {
   constructor(props) {
     super(props);
 
@@ -19,28 +20,46 @@ export default class ListRenderingComp extends Component {
           firstName: "mike",
           lastName: "tisan",
         },
-        {
-          id: 3,
-          firstName: "Json",
-          lastName: "holder",
-        },
       ],
     };
   }
+
+  addTop = () => {
+    const item = {
+      id: this.state.users.length,
+      firstName: `abc ${this.state.users.length + 1}`,
+      lastName: `xyz ${this.state.users.length + 1}`,
+    };
+    this.setState({
+      users: [item, ...this.state.users],
+    });
+  };
+
+  addBottom = () => {
+    const item = {
+      id: this.state.users.length,
+      firstName: `abc ${this.state.users.length + 1}`,
+      lastName: `xyz ${this.state.users.length + 1}`,
+    };
+    this.setState({
+      users: [...this.state.users, item],
+    });
+  };
 
   render() {
     const { users } = this.state;
 
     return (
       <>
-        <h2>User Listing</h2>
-
+        <button onClick={this.addTop}>Add Top</button>
+        <button onClick={this.addBottom}>Add Bottom</button>
         <table
           className={style.wrapper}
           style={{ margin: "20px", border: "1px solid green" }}
         >
           <thead>
             <tr className={style.item}>
+              <th className={style.item}>Key</th>
               <th className={style.item}>First Name</th>
               <th className={style.item}>Last Name</th>
             </tr>
@@ -48,12 +67,8 @@ export default class ListRenderingComp extends Component {
           <tbody>
             {users &&
               users.length &&
-              users.map((item) => {
-                return (
-                  <>
-                    <UserList item={item} key={item.id} title={"User List"} />
-                  </>
-                );
+              users.map((item, index) => {
+                return <UserList item={item} key={item.id} index={index} />;
               })}
           </tbody>
         </table>
