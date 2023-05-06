@@ -6,6 +6,7 @@ import CounterDemo from "./Components/CounterDemo";
 import DemoComponent from "./Components/DemoComponent";
 import EventBindingDemo from "./Components/EventBindingDemo";
 import Hello from "./Components/Hello";
+import ListRenderingComp from "./Components/ListRenderingComp";
 import SendDataFromParentToChildAsMethod from "./Components/SendDataFromParentToChildAsMethod";
 import TextBoxDemo from "./Components/TextBoxDemo";
 import Welcome from "./Components/Welcome";
@@ -77,7 +78,8 @@ class App extends React.Component {
           age={undefined}
           changeMessage={this.changeMessage}
         /> */}
-        <ConditionalRendingDemo />
+        {/* <ConditionalRendingDemo /> */}
+        <ListRenderingComp />
       </div>
     );
   }
