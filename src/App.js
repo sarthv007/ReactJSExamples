@@ -7,11 +7,14 @@ import DemoComponent from "./Components/DemoComponent";
 import EventBindingDemo from "./Components/EventBindingDemo";
 import FormComp from "./Components/FormComp";
 import Hello from "./Components/Hello";
+import LifeCycleDemo from "./Components/LifeCycleDemo";
 import ListRenderingComp from "./Components/ListRenderingComp";
 import ListwithKey from "./Components/ListwithKey";
 import SendDataFromParentToChildAsMethod from "./Components/SendDataFromParentToChildAsMethod";
 import TextBoxDemo from "./Components/TextBoxDemo";
+import UpdatingPhaseDemo from "./Components/UpdatingPhaseDemo";
 import Welcome from "./Components/Welcome";
+import UnMountingPhaseDemo from "./Components/UnMountingPhaseDemo";
 
 class App extends React.Component {
   constructor(props) {
@@ -29,11 +32,19 @@ class App extends React.Component {
     //alert("I am from changeMessage called from parent component ");
   };
 
+  // componentDidMount() {
+  //   let i = 1;
+  //   setInterval(() => {
+  //     i++;
+  //     this.setState({ message: `${this.state.message} ${i}` });
+  //   }, 1000);
+  // }
+
   render() {
     const person = {
       firstName: "Json",
     };
-    console.log(this.props);
+    //console.log(this.props);
     return (
       <div className={"App"}>
         {/* <Welcome></Welcome> */}
@@ -81,7 +92,9 @@ class App extends React.Component {
           changeMessage={this.changeMessage}
         /> */}
         {/* <ConditionalRendingDemo /> */}
-        <FormComp />
+        {/* <LifeCycleDemo text={this.state.message} /> */}
+        {/* <UpdatingPhaseDemo /> */}
+        <UnMountingPhaseDemo />
       </div>
     );
   }
