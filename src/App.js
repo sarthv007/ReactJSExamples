@@ -15,6 +15,9 @@ import TextBoxDemo from "./Components/TextBoxDemo";
 import UpdatingPhaseDemo from "./Components/UpdatingPhaseDemo";
 import Welcome from "./Components/Welcome";
 import UnMountingPhaseDemo from "./Components/UnMountingPhaseDemo";
+import HeroComponent from "./Components/HeroComponent";
+import ErrorBoundery from "./Components/ErrorBoundery";
+import ParentComponent from "./Components/ParentComponent";
 
 class App extends React.Component {
   constructor(props) {
@@ -94,7 +97,17 @@ class App extends React.Component {
         {/* <ConditionalRendingDemo /> */}
         {/* <LifeCycleDemo text={this.state.message} /> */}
         {/* <UpdatingPhaseDemo /> */}
-        <UnMountingPhaseDemo />
+        {/* <UnMountingPhaseDemo /> */}
+        {/* <ErrorBoundery>
+          <HeroComponent heroName={"Mike Tisan"} />
+        </ErrorBoundery>
+        <ErrorBoundery>
+          <HeroComponent heroName={"Json Holder"} />
+        </ErrorBoundery>
+        <ErrorBoundery>
+          <HeroComponent heroName={"Jocker"} />
+        </ErrorBoundery> */}
+        <ParentComponent />
       </div>
     );
   }
