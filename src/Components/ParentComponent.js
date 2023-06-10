@@ -1,5 +1,6 @@
 import React, { Component, PureComponent } from "react";
 import ChildComponent from "./ChildComponent";
+import MemoComponentDemo from "./MemoComponentDemo";
 
 export default class ParentComponent extends PureComponent {
   constructor(props) {
@@ -27,7 +28,8 @@ export default class ParentComponent extends PureComponent {
     console.log("rendering ParentComponent");
     return (
       <div>
-        <ChildComponent name={this.state.name} />
+        {/* <ChildComponent name={this.state.name} /> */}
+        <MemoComponentDemo name={this.state.name} />
       </div>
     );
   }

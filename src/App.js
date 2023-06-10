@@ -18,6 +18,11 @@ import UnMountingPhaseDemo from "./Components/UnMountingPhaseDemo";
 import HeroComponent from "./Components/HeroComponent";
 import ErrorBoundery from "./Components/ErrorBoundery";
 import ParentComponent from "./Components/ParentComponent";
+import RefDemo from "./Components/RefDemo";
+import ParentRef from "./Components/ParentRef";
+import FRInput from "./Components/FRInput";
+import FormComponent1 from "./Components/FormComponent1";
+import UnControlledComponent from "./Components/UnControlledComponent";
 
 class App extends React.Component {
   constructor(props) {
@@ -107,7 +112,12 @@ class App extends React.Component {
         <ErrorBoundery>
           <HeroComponent heroName={"Jocker"} />
         </ErrorBoundery> */}
-        <ParentComponent />
+        {/* <ParentComponent /> */}
+        {/* <RefDemo /> */}
+        {/* <ParentRef /> */}
+        {/* <FRInput /> */}
+        <FormComponent1 />
+        <UnControlledComponent />
       </div>
     );
   }
